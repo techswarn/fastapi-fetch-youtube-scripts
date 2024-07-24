@@ -29,11 +29,16 @@ def read_root():
         # )
 
         # # fetch the actual transcript data
-        transcript.fetch()
+        var = ""
+        try:
+            transcript.fetch()
 
-        # # translating the transcript will return another transcript object
-        var = transcript.translate('en').fetch()
-        print(transcript.translate('en').fetch())
+            # # translating the transcript will return another transcript object
+            var = transcript.translate('en').fetch()
+            print(transcript.translate('en').fetch())
+        except:
+            print("An exception occurred")
+
 
         # # you can also directly filter for the language you are looking for, using the transcript list
         #transcript = transcript_list.find_transcript(['en'])  
