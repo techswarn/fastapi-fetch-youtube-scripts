@@ -49,8 +49,3 @@ def read_root():
         # # or automatically generated ones  
         # transcript = transcript_list.find_generated_transcript(['hi'])
     return {"data": var}
-
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
